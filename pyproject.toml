@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ['py311']
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -12,7 +12,7 @@ exclude = '''
   | _build
   | build
   | dist
-  | migrations
+  | venv
 )/
 '''
 
@@ -28,12 +28,10 @@ exclude = [
     "dist",
     "node_modules",
     "venv",
-    "migrations"
 ]
 
 [tool.isort]
 lines_between_sections = 1
-skip = ["migrations"]
 skip_glob = [
     ".direnv",
     ".git",
@@ -48,4 +46,4 @@ skip_glob = [
     "migrations"
 ]
 sections = ['FUTURE', 'STDLIB', 'THIRDPARTY', 'FLASK', 'FIRSTPARTY', 'LOCALFOLDER']
-known_django = "flask"
+known_flask = "flask"

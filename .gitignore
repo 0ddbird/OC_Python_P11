@@ -6,4 +6,4 @@ tests/
 .envrc
 __pycache__
 venv/
-.flaskenv
+.env
