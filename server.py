@@ -20,10 +20,26 @@ def index():
     return render_template("index.html")
 
 
+class ClubNotFoundError(Exception):
+    pass
+
+
+def get_club_by_email(email: str) -> dict:
+    for club in clubs:
+        if club["email"] == email:
+            return club
+    raise ClubNotFoundError(f"Club not found for email: {email}")
+
+
 @app.route("/showSummary", methods=["POST"])
 def show_summary() -> Response:
-    club = [club for club in clubs if club["email"] == request.form["email"]][0]
-    return render_template("welcome.html", club=club, competitions=competitions)
+    email = request.form["email"]
+    try:
+        club = get_club_by_email(email)
+        return render_template("welcome.html", club=club, competitions=competitions)
+    except ClubNotFoundError as e:
+        flash(str(e))
+        return redirect(url_for("index"))
 
 
 @app.route("/book/<competition>/<club>")
