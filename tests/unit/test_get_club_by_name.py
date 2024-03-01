@@ -6,7 +6,6 @@ from server import ClubNotFoundError, get_club_by_name
 
 def test_get_club_by_name_found():
     test_name = clubs[0]["name"]
-
     club = get_club_by_name(test_name, clubs)
     assert club == clubs[0]
 

@@ -5,13 +5,17 @@
     <title>Booking for {{ competition['name'] }} || GUDLFT</title>
 </head>
 <body>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %}
+        <div class="flash-message">{{ message }}</div>
+        {% endfor %} {% endif %} {% endwith %}
     <h2>{{competition['name']}}</h2>
     Slots available: {{ competition['available_slots'] }}
     <form action="/purchaseSlots" method="post">
         <input type="hidden" name="club" value="{{ club['name'] }}">
         <input type="hidden" name="competition" value="{{ competition['name'] }}">
         <label for="slots">How many slots?</label>
-        <input type="number" name="slots" max="{{ max_bookable_slots }}" id="slots"/>
+        <input type="number" step="1" name="slots" max="{{ max_bookable_slots }}" id="slots"/>
         <button type="submit">Book</button>
     </form>
 </body>
