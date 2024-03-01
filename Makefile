@@ -4,7 +4,7 @@ run:
 		FLASK_ENV=development flask run
 
 test:
-		pytest .
+		PYTHONPATH=. pytest
 
 format:
 		isort . ; ruff check --fix ; ruff format ; black .
