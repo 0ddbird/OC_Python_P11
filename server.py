@@ -31,7 +31,7 @@ def index():
 
 
 def get_max_bookable_slots(available_points: int, available_slots: int) -> int:
-    return min(available_points, available_slots)
+    return min(available_points, available_slots, 12)
 
 
 @app.route("/showSummary", methods=["POST"])
