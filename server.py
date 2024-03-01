@@ -1,27 +1,15 @@
-import json
 import os
 
 from dotenv import load_dotenv
 
 from flask import Flask, Response, flash, redirect, render_template, request, url_for
 
+from utils import load_clubs, load_competitions
+
 load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
-
-
-def load_clubs() -> list[dict]:
-    with open("clubs.json") as c:
-        clubs_list = json.load(c)["clubs"]
-        return clubs_list
-
-
-def load_competitions() -> list[dict]:
-    with open("competitions.json") as comps:
-        competitions_list = json.load(comps)["competitions"]
-        return competitions_list
-
 
 competitions = load_competitions()
 clubs = load_clubs()
