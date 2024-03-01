@@ -3,7 +3,7 @@ import os
 
 from dotenv import load_dotenv
 
-from flask import Flask, flash, redirect, render_template, request, url_for
+from flask import Flask, Response, flash, redirect, render_template, request, url_for
 
 load_dotenv()
 
@@ -11,13 +11,13 @@ app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 
-def load_clubs():
+def load_clubs() -> list[dict]:
     with open("clubs.json") as c:
         clubs_list = json.load(c)["clubs"]
         return clubs_list
 
 
-def load_competitions():
+def load_competitions() -> list[dict]:
     with open("competitions.json") as comps:
         competitions_list = json.load(comps)["competitions"]
         return competitions_list
@@ -33,13 +33,13 @@ def index():
 
 
 @app.route("/showSummary", methods=["POST"])
-def show_summary():
+def show_summary() -> Response:
     club = [club for club in clubs if club["email"] == request.form["email"]][0]
     return render_template("welcome.html", club=club, competitions=competitions)
 
 
 @app.route("/book/<competition>/<club>")
-def book(competition, club):
+def book(competition: str, club: str) -> Response:
     found_club = [c for c in clubs if c["name"] == club][0]
     found_competition = [c for c in competitions if c["name"] == competition][0]
     if found_club and found_competition:
@@ -52,7 +52,7 @@ def book(competition, club):
 
 
 @app.route("/purchasePlaces", methods=["POST"])
-def purchase_places():
+def purchase_places() -> Response:
     competition = [c for c in competitions if c["name"] == request.form["competition"]][
         0
     ]
@@ -69,5 +69,5 @@ def purchase_places():
 
 
 @app.route("/logout")
-def logout():
+def logout() -> Response:
     return redirect(url_for("index"))
