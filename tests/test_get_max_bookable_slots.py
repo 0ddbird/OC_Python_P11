@@ -1,4 +1,4 @@
-from server import get_max_bookable_slots
+from views.booking_views import get_max_bookable_slots
 
 
 def test_get_max_bookable_slots_returns_min_value():

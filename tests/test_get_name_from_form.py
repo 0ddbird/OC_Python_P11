@@ -1,5 +1,6 @@
 import pytest
-from utils import FormContentError, get_name_from_form
+
+from views.purchase_slots import FormContentError, get_name_from_form
 
 
 def test_valid_name_value():

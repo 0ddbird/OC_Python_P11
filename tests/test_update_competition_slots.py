@@ -1,6 +1,6 @@
 import pytest
-from server import update_competition_slots
 
+from services.booking_services import update_competition_slots
 
 competition_mock = {
     "name": "Competition mock 1",

@@ -24,8 +24,8 @@
             {{ comp['name'] }}<br />
             Date: {{ comp['date'] }}</br>
             Number of Slots: {{ comp['available_slots'] }}
-            {% if comp['available_slots']|int >0 %}
-            <a href="{{ url_for('book', competition_name=comp['name'], club_name=club['name']) }}">Book Slots</a>
+            {% if comp['available_slots']|int > 0 and comp['is_active'] == True and club['points']|int > 0 %}
+            <a href="{{ url_for('book_route', competition_name=comp['name'], club_name=club['name']) }}">Book Slots</a>
             {%endif%}
         </li>
         <hr />

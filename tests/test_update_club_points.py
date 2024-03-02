@@ -1,5 +1,6 @@
 import pytest
-from server import update_club_points
+
+from services.booking_services import update_club_points
 
 club_mock = {
     "name": "Club mock 1",
