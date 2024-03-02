@@ -1,12 +1,14 @@
 from flask import Response, flash, redirect, render_template, url_for
 
 from data.store import ClubStore, CompetitionStore, ObjectDoesNotExist
+from utils import protected_view
 
 
 def get_max_bookable_slots(available_points: int, available_slots: int) -> int:
     return min(available_points, available_slots, 12)
 
 
+@protected_view
 def book_view(competition_name: str, club_name: str) -> Response:
     ClubStore.load()
     CompetitionStore.load()

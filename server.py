@@ -3,16 +3,20 @@ import os
 from dotenv import load_dotenv
 
 from flask import Flask, Response, render_template
+from utils import inject_user_status
 
 from views.booking_views import book_view
+from views.clubs_views import club_view
 from views.home_views import home_view
 from views.logout_views import logout_view
 from views.purchase_slots import purchase_slots_view
 
 load_dotenv()
 
+
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
+app.context_processor(inject_user_status)
 
 
 @app.route("/")
@@ -36,6 +40,9 @@ def purchase_slots_route() -> Response:
 
 
 # TODO: Add route for points display
+@app.route("/clubs", methods=["GET"])
+def clubs_route() -> Response:
+    return club_view()
 
 
 @app.route("/logout")

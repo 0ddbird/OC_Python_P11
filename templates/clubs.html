@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Clubs || GUDLFT{% endblock %}
+
+
+{% block content %}
+    <style>
+
+        #table-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #clubs-table {
+            width: 50%;
+        }
+
+        .clubs-table-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .table-heading {
+            font-weight: 700;
+        }
+
+    </style>
+
+    <h2>Clubs</h2>
+    <div id="table-wrapper">
+        <div id="clubs-table">
+            <div class="clubs-table-row table-heading">
+                <div>Club</div>
+                <div>Points</div>
+            </div>
+            <div class="clubs-table-row">
+                {% for club in clubs %}
+                    <div>{{ club["name"] }}</div>
+                    <div>{{ club["points"] }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

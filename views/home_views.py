@@ -1,8 +1,9 @@
 from datetime import datetime
 
-from flask import Response, flash, redirect, render_template, request, session, url_for
+from flask import Response, flash, redirect, render_template, url_for, session, request
 
 from data.store import ClubStore, CompetitionStore, ObjectDoesNotExist
+from utils import protected_view
 
 
 def is_active_competition(competition) -> bool:
@@ -18,12 +19,12 @@ def annotate_is_active(competitions: list[dict]) -> list[dict]:
     return annotated_competitions
 
 
+@protected_view
 def home_view() -> Response:
-    email = session.get("email", None) or request.form.get("email", None)
+    if request.method == "POST":
+        session["email"] = request.form["email"]
 
-    if not email:
-        flash("You must be logged in to access this page.")
-        return redirect(url_for("index"))
+    email = session.get("email")
 
     ClubStore.load()
     CompetitionStore.load()
