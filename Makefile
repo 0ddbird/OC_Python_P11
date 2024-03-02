@@ -1,4 +1,4 @@
-.PHONY: run test format cov
+.PHONY: run test format cov locust
 
 run:
 		FLASK_ENV=development flask run
@@ -11,3 +11,6 @@ format:
 
 cov:
 		PYTHONPATH=. pytest --cov=. --cov-report html:reports/coverage --cov-config=.coveragerc
+
+locust: 
+		locust -f locustfile.py
