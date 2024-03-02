@@ -39,7 +39,6 @@ def purchase_slots_route() -> Response:
     return purchase_slots_view()
 
 
-# TODO: Add route for points display
 @app.route("/clubs", methods=["GET"])
 def clubs_route() -> Response:
     return club_view()

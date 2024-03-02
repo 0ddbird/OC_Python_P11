@@ -1,4 +1,4 @@
-.PHONY: run test format
+.PHONY: run test format cov
 
 run:
 		FLASK_ENV=development flask run
@@ -8,3 +8,6 @@ test:
 
 format:
 		isort . ; ruff check --fix ; ruff format ; black .
+
+cov:
+		PYTHONPATH=. pytest --cov=. --cov-report html:reports/coverage --cov-config=.coveragerc
