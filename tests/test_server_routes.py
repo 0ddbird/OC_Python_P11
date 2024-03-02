@@ -1,5 +1,7 @@
-import pytest
 from random import randint
+
+import pytest
+
 from server import app
 
 

@@ -5,6 +5,4 @@ from data.store import ClubStore
 
 def club_view():
     ClubStore.load()
-    clubs = ClubStore.get_all()
-
-    return render_template("clubs.html", clubs=clubs)
+    return render_template("clubs.html", clubs=ClubStore.get_all())

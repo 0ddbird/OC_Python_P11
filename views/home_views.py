@@ -1,7 +1,5 @@
 from datetime import datetime
-
 from flask import Response, flash, redirect, render_template, request, session, url_for
-
 from data.store import ClubStore, CompetitionStore, ObjectDoesNotExist
 from utils import protected_view
 
@@ -13,7 +11,7 @@ def is_active_competition(competition) -> bool:
 
 
 def annotate_is_active(competitions: list[dict]) -> list[dict]:
-    annotated_competitions = competitions
+    annotated_competitions = [{**competition} for competition in competitions]
     for competition in annotated_competitions:
         competition["is_active"] = is_active_competition(competition)
     return annotated_competitions
