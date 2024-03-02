@@ -3,9 +3,9 @@ import os
 from dotenv import load_dotenv
 
 from flask import Flask, Response, render_template
-from utils import inject_user_status
 
-from views.booking_views import book_view
+from utils import inject_user_status
+from views.booking_views import booking_view
 from views.clubs_views import club_view
 from views.home_views import home_view
 from views.logout_views import logout_view
@@ -31,7 +31,7 @@ def home_route() -> Response:
 
 @app.route("/book/<competition_name>/<club_name>")
 def book_route(competition_name: str, club_name: str) -> Response:
-    return book_view(competition_name, club_name)
+    return booking_view(competition_name, club_name)
 
 
 @app.route("/purchase-slots", methods=["POST"])

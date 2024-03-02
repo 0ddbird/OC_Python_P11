@@ -1,6 +1,6 @@
-from flask import session
 from functools import wraps
-from flask import request, redirect, url_for, flash
+
+from flask import flash, redirect, request, session, url_for
 
 
 def inject_user_status():

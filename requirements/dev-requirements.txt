@@ -3,3 +3,4 @@ ruff
 black
 isort
 flask-testing
+locust

@@ -9,7 +9,7 @@ def get_max_bookable_slots(available_points: int, available_slots: int) -> int:
 
 
 @protected_view
-def book_view(competition_name: str, club_name: str) -> Response:
+def booking_view(competition_name: str, club_name: str) -> Response:
     ClubStore.load()
     CompetitionStore.load()
     try:

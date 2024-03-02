@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from flask import Response, flash, redirect, render_template, url_for, session, request
+from flask import Response, flash, redirect, render_template, request, session, url_for
 
 from data.store import ClubStore, CompetitionStore, ObjectDoesNotExist
 from utils import protected_view

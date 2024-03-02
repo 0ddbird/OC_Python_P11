@@ -1,24 +1,254 @@
 {
     "clubs": [
         {
-            "name": "Simply Lift",
-            "email": "john@simplylift.co",
-            "points": 13
+            "name": "Club 1",
+            "email": "secretary@club1.com",
+            "points": 47
         },
         {
-            "name": "Iron Temple",
-            "email": "admin@irontemple.com",
-            "points": 4
+            "name": "Club 2",
+            "email": "secretary@club2.com",
+            "points": 48
         },
         {
-            "name": "She Lifts",
-            "email": "kate@shelifts.co.uk",
+            "name": "Club 3",
+            "email": "secretary@club3.com",
+            "points": 46
+        },
+        {
+            "name": "Club 4",
+            "email": "secretary@club4.com",
+            "points": 10
+        },
+        {
+            "name": "Club 5",
+            "email": "secretary@club5.com",
+            "points": 30
+        },
+        {
+            "name": "Club 6",
+            "email": "secretary@club6.com",
+            "points": 41
+        },
+        {
+            "name": "Club 7",
+            "email": "secretary@club7.com",
+            "points": 3
+        },
+        {
+            "name": "Club 8",
+            "email": "secretary@club8.com",
+            "points": 22
+        },
+        {
+            "name": "Club 9",
+            "email": "secretary@club9.com",
+            "points": 19
+        },
+        {
+            "name": "Club 10",
+            "email": "secretary@club10.com",
+            "points": 27
+        },
+        {
+            "name": "Club 11",
+            "email": "secretary@club11.com",
+            "points": 49
+        },
+        {
+            "name": "Club 12",
+            "email": "secretary@club12.com",
+            "points": 35
+        },
+        {
+            "name": "Club 13",
+            "email": "secretary@club13.com",
+            "points": 46
+        },
+        {
+            "name": "Club 14",
+            "email": "secretary@club14.com",
+            "points": 28
+        },
+        {
+            "name": "Club 15",
+            "email": "secretary@club15.com",
+            "points": 27
+        },
+        {
+            "name": "Club 16",
+            "email": "secretary@club16.com",
             "points": 12
         },
         {
-            "name": "admin",
-            "email": "a@b.c",
+            "name": "Club 17",
+            "email": "secretary@club17.com",
+            "points": 17
+        },
+        {
+            "name": "Club 18",
+            "email": "secretary@club18.com",
             "points": 6
+        },
+        {
+            "name": "Club 19",
+            "email": "secretary@club19.com",
+            "points": 40
+        },
+        {
+            "name": "Club 20",
+            "email": "secretary@club20.com",
+            "points": 36
+        },
+        {
+            "name": "Club 21",
+            "email": "secretary@club21.com",
+            "points": 21
+        },
+        {
+            "name": "Club 22",
+            "email": "secretary@club22.com",
+            "points": 28
+        },
+        {
+            "name": "Club 23",
+            "email": "secretary@club23.com",
+            "points": 49
+        },
+        {
+            "name": "Club 24",
+            "email": "secretary@club24.com",
+            "points": 33
+        },
+        {
+            "name": "Club 25",
+            "email": "secretary@club25.com",
+            "points": 18
+        },
+        {
+            "name": "Club 26",
+            "email": "secretary@club26.com",
+            "points": 3
+        },
+        {
+            "name": "Club 27",
+            "email": "secretary@club27.com",
+            "points": 39
+        },
+        {
+            "name": "Club 28",
+            "email": "secretary@club28.com",
+            "points": 14
+        },
+        {
+            "name": "Club 29",
+            "email": "secretary@club29.com",
+            "points": 33
+        },
+        {
+            "name": "Club 30",
+            "email": "secretary@club30.com",
+            "points": 25
+        },
+        {
+            "name": "Club 31",
+            "email": "secretary@club31.com",
+            "points": 29
+        },
+        {
+            "name": "Club 32",
+            "email": "secretary@club32.com",
+            "points": 45
+        },
+        {
+            "name": "Club 33",
+            "email": "secretary@club33.com",
+            "points": 20
+        },
+        {
+            "name": "Club 34",
+            "email": "secretary@club34.com",
+            "points": 27
+        },
+        {
+            "name": "Club 35",
+            "email": "secretary@club35.com",
+            "points": 48
+        },
+        {
+            "name": "Club 36",
+            "email": "secretary@club36.com",
+            "points": 22
+        },
+        {
+            "name": "Club 37",
+            "email": "secretary@club37.com",
+            "points": 29
+        },
+        {
+            "name": "Club 38",
+            "email": "secretary@club38.com",
+            "points": 29
+        },
+        {
+            "name": "Club 39",
+            "email": "secretary@club39.com",
+            "points": 28
+        },
+        {
+            "name": "Club 40",
+            "email": "secretary@club40.com",
+            "points": 25
+        },
+        {
+            "name": "Club 41",
+            "email": "secretary@club41.com",
+            "points": 22
+        },
+        {
+            "name": "Club 42",
+            "email": "secretary@club42.com",
+            "points": 25
+        },
+        {
+            "name": "Club 43",
+            "email": "secretary@club43.com",
+            "points": 39
+        },
+        {
+            "name": "Club 44",
+            "email": "secretary@club44.com",
+            "points": 33
+        },
+        {
+            "name": "Club 45",
+            "email": "secretary@club45.com",
+            "points": 30
+        },
+        {
+            "name": "Club 46",
+            "email": "secretary@club46.com",
+            "points": 18
+        },
+        {
+            "name": "Club 47",
+            "email": "secretary@club47.com",
+            "points": 30
+        },
+        {
+            "name": "Club 48",
+            "email": "secretary@club48.com",
+            "points": 28
+        },
+        {
+            "name": "Club 49",
+            "email": "secretary@club49.com",
+            "points": 35
+        },
+        {
+            "name": "Club 50",
+            "email": "secretary@club50.com",
+            "points": 38
         }
     ]
 }
