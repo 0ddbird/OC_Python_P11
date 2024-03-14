@@ -13,7 +13,7 @@ def booking_view(competition_name: str, club_name: str) -> Response:
         competition = CompetitionStore.get("name", competition_name)
     except ObjectDoesNotExist as e:
         flash(str(e))
-        return redirect(url_for("home"))
+        return redirect(url_for("home_route"))
 
     max_bookable_slots = min(club["points"], competition["available_slots"], 12)
     return render_template(
