@@ -16,39 +16,69 @@ This project uses the following technologies:
 ## 3. Installation
 
 ### Creating a virtual environment
-- After cloning, change into the directory and type `python -m venv venv`.  
+- After cloning, change into the directory and type 
+```bash
+python -m venv venv
+```  
 This will then set up a a virtual python environment within that directory.
 
 ### Activating the virtual environment
-`source venv/bin/activate`.  
+```bash
+source venv/bin/activate
+```
 
 ### Dectivating the virtual environment
-`deactivate`
+```bash
+deactivate
+```
 
 ### Installing the requirements
 
-`pip install -r requirements/requirements.txt`
+```bash
+pip install -r requirements/requirements.txt
+```
 
 ### (Optional) Installing the development requirements
-`pip install -r requirements/dev-requirements.txt`
+```bash
+pip install -r requirements/dev-requirements.txt
+```
 
 ### Creating a .env file
-`cat > test`    
+```bash
+cat > .env
+```    
 then type:  
-`FLASK_SECRET_KEY=<a_secret_key_of_your_choice>`  
+```bash
+FLASK_SECRET_KEY=<a_secret_key_of_your_choice>
+```  
 then press CTRL+D to save and exit.  
 
 
 ## 4. Usage
 
 ### Run the server
-`make run`
+
+```bash
+make run
+```
 then navigate to http://127.0.0.1:5000
+
 ### Run the test suite (dev dependencies must be installed)
-`make test`
+
+```bash
+make test
+```
 
 ### Generate coverage report (dev dependencies must be installed)
-`make cov`, then you can find the generated report at `~/reports/coverage/index.html`
+
+```bash
+make cov
+```
+then you can find the generated report at `~/reports/coverage/index.html`
 
 ### Run Locust (dev dependencies must be installed)
-`make locust` then navigate to http://0.0.0.0:8089
+
+```bash
+make locust
+```
+then navigate to http://0.0.0.0:8089
