@@ -47,9 +47,3 @@ skip_glob = [
 ]
 sections = ['FUTURE', 'STDLIB', 'THIRDPARTY', 'FLASK', 'FIRSTPARTY', 'LOCALFOLDER']
 known_flask = "flask"
-[tool.poetry]
-name = "oc-python-p11"
-version = "0.1.0"
-description = ""
-authors = ["0ddbird <0ddbird@proton.me>"]
-readme = "README.md"
