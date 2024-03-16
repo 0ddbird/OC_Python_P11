@@ -21,8 +21,10 @@ def purchase_slots_view() -> Response:
     try:
         competition_name = get_name_from_form(request.form, "competition")
         competition = CompetitionStore.get("name", competition_name)
+
         club_name = get_name_from_form(request.form, "club")
         club = ClubStore.get("name", club_name)
+
         session["email"] = club["email"]
         slots = request.form["slots"]
         purchase_slots(competition, club, slots)

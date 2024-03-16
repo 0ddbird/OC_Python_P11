@@ -1,7 +1,7 @@
 .PHONY: run test format cov locust
 
 run:
-		FLASK_ENV=development flask run
+		FLASK_ENV=development flask run --debug
 
 test:
 		PYTHONPATH=. pytest

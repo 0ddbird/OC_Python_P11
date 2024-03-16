@@ -4,3 +4,4 @@ black
 isort
 flask-testing
 locust
+pytest-cov

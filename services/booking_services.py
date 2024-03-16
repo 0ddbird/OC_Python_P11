@@ -1,9 +1,12 @@
 from data.store import ClubStore, CompetitionStore
 
 
-def validate_slots_is_pos_int(required_slots: int) -> int:
-    if not isinstance(required_slots, int):
+def validate_slots_is_pos_int(required_slots_str: str) -> int:
+    required_slots = int(required_slots_str)
+
+    if float(required_slots) != float(required_slots_str):
         raise ValueError("The number of slots to book must be a positive integer")
+
     if required_slots <= 0:
         raise ValueError("The number of slots to book must be a positive integer")
     return required_slots

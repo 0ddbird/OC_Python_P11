@@ -3,12 +3,12 @@
         {
             "name": "Competition 1",
             "date": "2023-05-15 06:23:06",
-            "available_slots": 23
+            "available_slots": 3
         },
         {
             "name": "Competition 2",
             "date": "2025-12-08 07:21:15",
-            "available_slots": 49
+            "available_slots": 33
         },
         {
             "name": "Competition 3",

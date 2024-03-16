@@ -56,3 +56,4 @@ ClubStore.load()
 
 CompetitionStore = CompetitionStore()
 CompetitionStore.load()
+
